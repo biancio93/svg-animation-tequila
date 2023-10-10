@@ -1,0 +1,64 @@
+/* ==============================================
+STILE GENERALE
+============================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Rye', cursive;
+}
+
+svg{
+    overflow: visible;
+}
+
+/* ==============================================
+ANIMAZIONI DECORAZIONE
+============================================== */
+
+/* The animation code */
+@keyframes rotazione {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* The element to apply the animation to */
+.animazione-decorazione {
+    animation-name: rotazione;
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* ==============================================
+ANIMAZIONI ELEMENTI
+============================================== */
+
+.hover-svg-animation {
+    transition: 0.5s ease-in-out;
+    transform-origin: center center;
+    transform-box: fill-box;
+}
+
+.svg-hover-container:hover .animazione-bicchiere {
+    transform: translateX(200px) translateY(-100px) rotate(14deg);
+}
+.svg-hover-container:hover .animazione-limone{
+    transform: translateX(-200px) translateY(-100px) rotate(14deg);
+}
+.svg-hover-container:hover .animazione-tappo{
+    transform: translateY(-130px) rotate(14deg);
+}
+.svg-hover-container:hover .animazione-decorazione-interna{
+    transform: scale(0.1);
+}
